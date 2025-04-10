@@ -2,7 +2,9 @@ const container = $('.grid-container')[0];
 
 const cellSize = 12;
 const columns = Math.floor(window.innerWidth / cellSize);
-const totalCells = columns * 115;
+const rows = Math.ceil(document.documentElement.scrollHeight / cellSize) + 2;
+const totalCells = columns * rows;
+
 const cells = []
 
 for (let i = 0; i < totalCells; i++) {
@@ -25,26 +27,61 @@ for (let i = 0; i < totalCells; i++) {
 
 var streaks = []
 
+let lastTime = 0;
+const interval = 10; // in ms
+
+function createAnimation(run, rise, streak) {
+    let lastTime = 0;
+    const trailLength = 4;
+    const trail = [];
+
+    function animate(timestamp) {
+        if (timestamp - lastTime >= interval) {
+            const x = Math.round(streak[0]);
+            const y = Math.round(streak[1]);
+            const index = x + y * columns;
+
+            if (index >= 0 && index < cells.length) {
+                cells[index].classList.add("glow");
+                trail.push(index);
+
+                // Keep the trail at fixed length
+                if (trail.length > trailLength) {
+                    const oldIndex = trail.shift();
+                    cells[oldIndex]?.classList.remove("glow");
+                }
+            }
+
+            streak[0] -= run;
+            streak[1] += rise;
+
+            lastTime = timestamp;
+
+            // Stop the animation if it goes off screen
+            if (streak[1] > rows) {
+				const oldIndex = trail.shift();
+                cells[oldIndex]?.classList.remove("glow");
+				
+				if (trail.length == 0)
+				{
+					streaks = streaks.filter(el => el !== streak);
+					return;
+				}
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+}
+
+  
+
 setInterval(() => {
 	streaks.push([Math.random() * columns - 1, 0]);
 
 	const angle = Math.random() * Math.PI / 6 + Math.PI / 4;
-	console.log(angle);
 
-	const intervalID = setInterval((run, rise, streak) => {
-		cells[Math.round(streak[0]) + Math.round(streak[1]) * columns].classList.add("glow");
-
-		setTimeout((old_x, old_y) => {
-			cells[old_x + old_y * columns].classList.remove("glow");
-		}, 100, Math.round(streak[0]), Math.round(streak[1]));
-
-		streak[0] -= run;
-		streak[1] += rise;
-
-		if (streak[1] > 115)
-		{
-			streaks = streaks.filter(el => el === streak);
-			clearInterval(intervalID);
-		}
-	}, 30, Math.cos(angle), Math.sin(angle), streaks[streaks.length - 1]);
-}, 50)
+	createAnimation(Math.cos(angle), Math.sin(angle), streaks[streaks.length - 1]);
+}, 100)
