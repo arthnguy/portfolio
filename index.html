@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid Hover Glow</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="grid-container"></div>
+	<div class="top">
+		<div class="icon-container">
+			<a href="https://drive.google.com/file/d/1PxSUGA7XVNcQLfSnAwY4U2sAsGhl6gjc/view?usp=drive_link">
+				<p style="font-family: Raleway, sans-serif; color: white; margin: auto 0.3rem;">Resume</p>
+			</a>
+		</div>
+		<div class="icon-container">
+			<a href="https://www.github.com/arthnguy">
+				<image class="icon" src="assets/dark-github.svg" alt="Github">
+			</a>
+			<a href="https://www.linkedin.com/in/arthur-nguyen-316309359/">
+				<image class="icon" src="assets/dark-linkedin.svg" alt="LinkedIn">
+			</a>
+		</div>
+	</div>
+
+	<div id="site">
+		<div class="intro">
+			<h1>Arthur Nguyen</h1>
+			<p>Currently pursuing a B.S. in Computer Science and Engineering at UC Davis. Currently unemployed :(</p>
+		</div>
+		
+		<h2>Technologies</h2>
+		<div id="technologies">
+			<div class="info-container" style="margin-bottom: 1rem; grid-area: top-left;">
+				<p style="margin: 0; margin-bottom: 0.3rem;">Languages</p>
+				<div class="tech-div">
+					<image class="logo" src="assets/python.svg" alt="Python" />
+					<image class="logo" src="assets/cpp.svg" alt="C++" />
+					<image class="logo" src="assets/c.svg" alt="C" />
+					<image class="logo" src="assets/java.svg" alt="Java" />
+					<image class="logo" src="assets/cs.svg" alt="C#" />
+					<image class="logo" src="assets/r.svg" alt="R" />
+				</div>
+			</div>
+			<div class="info-container" style="margin-bottom: 1rem; grid-area: right;">
+				<p style="margin: 0; margin-bottom: 0.3rem;">Web Development</p>
+				<div class="tech-div">
+					<image class="logo" src="assets/html.svg" alt="HTML" />
+					<image class="logo" src="assets/css.svg" alt="CSS" />
+					<image class="logo" src="assets/js.svg" alt="JavaScript" />
+					<image class="logo" src="assets/jquery.svg" alt="jQuery" />
+					<image class="logo" src="assets/react.svg" alt="React" />
+					<image class="logo" src="assets/tailwind.svg" alt="Tailwind" />
+					<image class="logo" src="assets/node.svg" alt="Node.JS" />
+					<image class="logo" src="assets/express.svg" alt="express.js" />
+					<image class="logo" src="assets/mongodb.svg" alt="MongoDB" />
+				</div>
+			</div>
+			<div class="info-container" style="margin-bottom: 1rem; grid-area: bottom-left;">
+				<p style="margin: 0; margin-bottom: 0.3rem;">Miscellaneous</p>
+				<div class="tech-div">
+					<image class="logo" src="assets/git.svg" alt="git" />
+					<image class="logo" src="assets/llamaindex.svg" alt="LlamaIndex" />
+					<image class="logo" src="assets/aws.svg" alt="AWS" />
+				</div>
+			</div>
+		</div>
+
+		<h2>Newest Projects</h2>
+		<div id="projects">
+			<div class="info-container" style="grid-area: tl;">
+				<div style="display: flex; justify-content: space-between; align-items: center;">
+					<h3>Portfolio</h3>
+					<div class="proj-info">
+						<image class="proj-logo" src="assets/html.svg" alt="HTML" />
+						<image class="proj-logo" src="assets/css.svg" alt="CSS" />
+						<image class="proj-logo" src="assets/js.svg" alt="JavaScript" />
+					</div>
+				</div>
+				<p>Just my skills and what I've done with nothing too crazy. Utilizes the classic trinity that is HTML, CSS, and JS.</p>
+			</div>
+			<div class="info-container" style="grid-area: tr;">
+				<a href="https://github.com/arthnguy/20qs/" style="pointer-events: auto;">
+					<img src="assets/20qs.webp" style="border-radius: 0.5rem; max-width: 100%;"/>
+				</a>
+				<div style="display: flex; justify-content: space-between; align-items: center;">
+					<h3>20qs</h3>
+					<div class="proj-info">
+						<image class="proj-logo" src="assets/react.svg" alt="React" />
+						<image class="proj-logo" src="assets/tailwind.svg" alt="Tailwind" />
+						<image class="proj-logo" src="assets/node.svg" alt="Node.JS" />
+						<image class="proj-logo" src="assets/express.svg" alt="express.js" />
+					</div>
+				</div>
+				<p>A web application that uses the WebSocket protocol to allow users to play a modified version of the real-life parlor game "Twenty Questions".</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="script.js" type="module"></script>
+</body>
+</html>

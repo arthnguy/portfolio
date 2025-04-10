@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+body {
+    position: relative;
+    margin: 0;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
+    grid-template-rows: 100;
+    gap: 2px;
+    width: 100vw;
+}
+
+.grid-line {
+    height: 0.2rem;
+    width: 100%;
+    background-color: #7b00ff;
+    box-shadow: 
+        0 0 15px #7b00ff,
+        0 0 30px #7b00ff,
+        0 0 60px #7b00ff,
+        0 0 80px #7b00ff;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    background-color: #11111100;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cell.glow {
+    background-color: #7b00ff;
+    box-shadow: 
+        0 0 15px #7b00ff,
+        0 0 30px #7b00ff,
+        0 0 60px #7b00ff,
+        0 0 80px #7b00ff;
+}
+
+.top {
+    position: fixed;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin-top: 1rem;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.icon-container {
+    display: flex;
+    background-color: #33333380;
+    border-radius: 1rem;
+    padding: 0.2rem;
+}
+
+.icon-container a {
+	display: flex;
+	align-items: center;
+    pointer-events: auto;
+}
+
+.info-container {
+    flex: 1;
+    margin: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #33333380;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+
+.icon {
+    width: 2rem;
+    margin: 0 0.3rem;
+    border-radius: 10rem;
+    transition: box-shadow 0.15s ease;
+}
+
+.icon:hover {
+    box-shadow: 0 0 0.5rem white;
+}
+
+.intro {
+    width: 100vw;
+    height: 30rem;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.2rem;
+}
+
+.intro h1 {
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    font-weight: 500;
+    font-size: 3rem;
+    font-style: normal;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 4px white;
+}
+
+h4 {
+    font-family: "Red Hat Text", sans-serif;
+    color: rgb(200, 200, 200);
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: "Red Hat Text", sans-serif;
+    color: rgb(200, 200, 200);
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    line-height: 1.5rem;
+}
+
+h3 {
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 1.75rem;
+    font-style: normal;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.logo {
+    height: 2.5rem;
+    margin: 0.3rem;
+}
+
+#site {
+    width: 50%; 
+    position: absolute; 
+    display: flex; 
+    top: 0; 
+    flex-direction: column; 
+    pointer-events: none;
+    align-items: center;
+}
+
+#technologies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "top-left right"
+        "bottom-left right";
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.tech-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "tl tr"
+        "bl br";
+    width: 100%;
+    pointer-events: none;
+}
+
+h2 {
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.proj-info {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.proj-logo {
+    height: 1.5rem;
+    margin: 0 0.2rem;
+}
