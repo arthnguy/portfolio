@@ -28,7 +28,7 @@ for (let i = 0; i < totalCells; i++) {
 var streaks = []
 
 let lastTime = 0;
-const interval = 10; // in ms
+const interval = 10;
 
 function createAnimation(run, rise, streak) {
     let lastTime = 0;
@@ -76,12 +76,19 @@ function createAnimation(run, rise, streak) {
     requestAnimationFrame(animate);
 }
 
-  
+let currTime = 0;
+const spawnTime = 100;
 
-setInterval(() => {
-	streaks.push([Math.random() * columns - 1, 0]);
+function spawn(timestamp) {
+	if (timestamp - currTime >= spawnTime) {
+		streaks.push([Math.random() * columns - 1, 0]);
+		const angle = Math.random() * Math.PI / 6 + Math.PI / 4;
+		createAnimation(Math.cos(angle), Math.sin(angle), streaks[streaks.length - 1]);
 
-	const angle = Math.random() * Math.PI / 6 + Math.PI / 4;
+		currTime = timestamp;
+	}
+	
+	requestAnimationFrame(spawn);
+}
 
-	createAnimation(Math.cos(angle), Math.sin(angle), streaks[streaks.length - 1]);
-}, 100)
+requestAnimationFrame(spawn);
