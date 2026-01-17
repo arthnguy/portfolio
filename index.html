@@ -3,104 +3,219 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+	<title>Arthur Nguyen - Software Engineer</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<div class="grid-container"></div>
-	<div class="top">
-		<div class="icon-container">
-			<a href="https://drive.google.com/file/d/1DHwoATAqtHp15kFrQnpa_VgzQQ8SWT41/view?usp=sharing">
-				<p style="font-family: Raleway, sans-serif; color: white; margin: auto 0.3rem;">Resume</p>
-			</a>
-		</div>
-		<div class="icon-container">
-			<a href="https://www.github.com/arthnguy">
-				<image class="icon" src="assets/dark-github.svg" alt="Github">
-			</a>
-			<a href="https://www.linkedin.com/in/arthur-nguyen-316309359/">
-				<image class="icon" src="assets/dark-linkedin.svg" alt="LinkedIn">
-			</a>
-		</div>
-	</div>
-
-	<div id="site">
-		<div class="intro">
-			<h1>Arthur Nguyen</h1>
-			<p style="text-align: center;">Currently pursuing a B.S. in Computer Science and Engineering at UC Davis.<br />Seeking opportunities in software engineering.</p>
-		</div>
-		
-		<h2>Technologies</h2>
-		<div id="technologies">
-			<div class="info-container" style="margin-bottom: 1rem; grid-area: top-left;">
-				<p style="margin: 0; margin-bottom: 0.3rem;">Languages</p>
-				<div class="tech-div">
-					<image class="logo" src="assets/python.svg" alt="Python" />
-					<image class="logo" src="assets/cpp.svg" alt="C++" />
-					<image class="logo" src="assets/c.svg" alt="C" />
-					<image class="logo" src="assets/java.svg" alt="Java" />
-					<image class="logo" src="assets/cs.svg" alt="C#" />
-					<image class="logo" src="assets/r.svg" alt="R" />
-				</div>
+	
+	<nav class="navbar">
+		<div class="nav-content">
+			<div class="nav-logo">AN</div>
+			<div class="nav-links">
+				<a href="#about" class="nav-link">About</a>
+				<a href="#technologies" class="nav-link">Tech Stack</a>
+				<a href="#projects" class="nav-link">Projects</a>
+				<a href="https://drive.google.com/file/d/1DHwoATAqtHp15kFrQnpa_VgzQQ8SWT41/view?usp=sharing" class="nav-link resume-link" target="_blank">Resume</a>
 			</div>
-			<div class="info-container" style="margin-bottom: 1rem; grid-area: right;">
-				<p style="margin: 0; margin-bottom: 0.3rem;">Web Development</p>
-				<div class="tech-div">
-					<image class="logo" src="assets/html.svg" alt="HTML" />
-					<image class="logo" src="assets/css.svg" alt="CSS" />
-					<image class="logo" src="assets/js.svg" alt="JavaScript" />
-					<image class="logo" src="assets/jquery.svg" alt="jQuery" />
-					<image class="logo" src="assets/react.svg" alt="React" />
-					<image class="logo" src="assets/tailwind.svg" alt="Tailwind" />
-					<image class="logo" src="assets/node.svg" alt="Node.JS" />
-					<image class="logo" src="assets/express.svg" alt="express.js" />
-					<image class="logo" src="assets/mongodb.svg" alt="MongoDB" />
-				</div>
-			</div>
-			<div class="info-container" style="margin-bottom: 1rem; grid-area: bottom-left;">
-				<p style="margin: 0; margin-bottom: 0.3rem;">Miscellaneous</p>
-				<div class="tech-div">
-					<image class="logo" src="assets/git.svg" alt="git" />
-					<image class="logo" src="assets/aws.svg" alt="AWS" />
-				</div>
-			</div>
-		</div>
-
-		<h2>Newest Projects</h2>
-		<div id="projects">
-			<div class="info-container" style="grid-area: tl;">
-				<a href="https://github.com/arthnguy/portfolio/" style="pointer-events: auto;">
-					<img src="assets/portfolio.webp" style="border-radius: 0.5rem; max-width: 100%;"/>
+			<div class="social-links">
+				<a href="https://www.github.com/arthnguy" class="social-link" target="_blank" aria-label="GitHub">
+					<img class="social-icon" src="assets/dark-github.svg" alt="GitHub">
 				</a>
-				<div style="display: flex; justify-content: space-between; align-items: center;">
-					<h3>Portfolio</h3>
-					<div class="proj-info">
-						<image class="proj-logo" src="assets/html.svg" alt="HTML" />
-						<image class="proj-logo" src="assets/css.svg" alt="CSS" />
-						<image class="proj-logo" src="assets/js.svg" alt="JavaScript" />
+				<a href="https://www.linkedin.com/in/arthur-nguyen-316309359/" class="social-link" target="_blank" aria-label="LinkedIn">
+					<img class="social-icon" src="assets/dark-linkedin.svg" alt="LinkedIn">
+				</a>
+			</div>
+		</div>
+	</nav>
+
+	<main class="container">
+		<section class="hero" id="about">
+			<div class="hero-content">
+				<div class="hero-badge">Available for opportunities</div>
+				<h1 class="hero-title">
+					Hi, I'm <span class="gradient-text">Arthur Nguyen</span>
+				</h1>
+				<p class="hero-subtitle">Computer Science & Engineering Student at UC Davis</p>
+				<p class="hero-description">
+					Building modern web applications and exploring the intersection of software engineering and creative problem-solving. 
+					Passionate about clean code, intuitive design, and continuous learning.
+				</p>
+				<div class="hero-cta">
+					<a href="#projects" class="btn btn-primary">View My Work</a>
+					<a href="https://drive.google.com/file/d/1DHwoATAqtHp15kFrQnpa_VgzQQ8SWT41/view?usp=sharing" class="btn btn-secondary" target="_blank">Download Resume</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="technologies">
+			<h2 class="section-title">Tech Stack</h2>
+			<p class="section-subtitle">Technologies and tools I work with</p>
+			
+			<div class="tech-container">
+				<div class="tech-category">
+					<h3 class="tech-category-title">Languages</h3>
+					<div class="tech-icons-flow">
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/python.svg" alt="Python" title="Python" />
+							<span class="tech-name">Python</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/cpp.svg" alt="C++" title="C++" />
+							<span class="tech-name">C++</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/c.svg" alt="C" title="C" />
+							<span class="tech-name">C</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/java.svg" alt="Java" title="Java" />
+							<span class="tech-name">Java</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/cs.svg" alt="C#" title="C#" />
+							<span class="tech-name">C#</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/r.svg" alt="R" title="R" />
+							<span class="tech-name">R</span>
+						</div>
 					</div>
 				</div>
-				<p>Just my skills and what I've done with nothing too crazy. Utilizes the classic trinity that is HTML, CSS, and JS.</p>
-			</div>
-			<div class="info-container" style="grid-area: tr;">
-				<a href="https://github.com/arthnguy/20qs/" style="pointer-events: auto;">
-					<img src="assets/20qs.webp" style="border-radius: 0.5rem; max-width: 100%;"/>
-				</a>
-				<div style="display: flex; justify-content: space-between; align-items: center;">
-					<h3>20qs</h3>
-					<div class="proj-info">
-						<image class="proj-logo" src="assets/react.svg" alt="React" />
-						<image class="proj-logo" src="assets/tailwind.svg" alt="Tailwind" />
-						<image class="proj-logo" src="assets/node.svg" alt="Node.JS" />
-						<image class="proj-logo" src="assets/express.svg" alt="express.js" />
+
+				<div class="tech-category">
+					<h3 class="tech-category-title">Web Development</h3>
+					<div class="tech-icons-flow">
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/html.svg" alt="HTML" title="HTML" />
+							<span class="tech-name">HTML</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/css.svg" alt="CSS" title="CSS" />
+							<span class="tech-name">CSS</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/js.svg" alt="JavaScript" title="JavaScript" />
+							<span class="tech-name">JavaScript</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/react.svg" alt="React" title="React" />
+							<span class="tech-name">React</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/node.svg" alt="Node.js" title="Node.js" />
+							<span class="tech-name">Node.js</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/express.svg" alt="Express" title="Express" />
+							<span class="tech-name">Express</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/tailwind.svg" alt="Tailwind" title="Tailwind" />
+							<span class="tech-name">Tailwind</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/mongodb.svg" alt="MongoDB" title="MongoDB" />
+							<span class="tech-name">MongoDB</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/jquery.svg" alt="jQuery" title="jQuery" />
+							<span class="tech-name">jQuery</span>
+						</div>
 					</div>
 				</div>
-				<p>A web application that uses the WebSocket protocol to allow users to play a modified version of the real-life parlor game "Twenty Questions".</p>
+
+				<div class="tech-category">
+					<h3 class="tech-category-title">Tools & Cloud</h3>
+					<div class="tech-icons-flow">
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/git.svg" alt="Git" title="Git" />
+							<span class="tech-name">Git</span>
+						</div>
+						<div class="tech-item">
+							<img class="tech-logo" src="assets/aws.svg" alt="AWS" title="AWS" />
+							<span class="tech-name">AWS</span>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
+		</section>
+
+		<section class="section" id="projects">
+			<h2 class="section-title">Featured Projects</h2>
+			<p class="section-subtitle">Recent work and experiments</p>
+			
+			<div class="projects-grid">
+				<article class="project-card">
+					<a href="https://github.com/arthnguy/portfolio/" class="project-link" target="_blank">
+						<div class="project-image-wrapper">
+							<img src="assets/portfolio.webp" class="project-image" alt="Portfolio Project"/>
+							<div class="project-overlay">
+								<span class="project-view">View Project →</span>
+							</div>
+						</div>
+					</a>
+					<div class="project-content">
+						<div class="project-header">
+							<h3 class="project-title">Portfolio</h3>
+							<div class="project-tech">
+								<img class="project-tech-icon" src="assets/html.svg" alt="HTML" title="HTML" />
+								<img class="project-tech-icon" src="assets/css.svg" alt="CSS" title="CSS" />
+								<img class="project-tech-icon" src="assets/js.svg" alt="JavaScript" title="JavaScript" />
+							</div>
+						</div>
+						<p class="project-description">
+							A modern, interactive portfolio showcasing skills and projects. Features an animated grid background with custom JavaScript animations and responsive design.
+						</p>
+						<div class="project-tags">
+							<span class="tag">Vanilla JS</span>
+							<span class="tag">CSS Grid</span>
+							<span class="tag">Animations</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<a href="https://github.com/arthnguy/20qs/" class="project-link" target="_blank">
+						<div class="project-image-wrapper">
+							<img src="assets/20qs.webp" class="project-image" alt="20qs Project"/>
+							<div class="project-overlay">
+								<span class="project-view">View Project →</span>
+							</div>
+						</div>
+					</a>
+					<div class="project-content">
+						<div class="project-header">
+							<h3 class="project-title">20qs</h3>
+							<div class="project-tech">
+								<img class="project-tech-icon" src="assets/react.svg" alt="React" title="React" />
+								<img class="project-tech-icon" src="assets/tailwind.svg" alt="Tailwind" title="Tailwind" />
+								<img class="project-tech-icon" src="assets/node.svg" alt="Node.js" title="Node.js" />
+								<img class="project-tech-icon" src="assets/express.svg" alt="Express" title="Express" />
+							</div>
+						</div>
+						<p class="project-description">
+							Real-time multiplayer web application using WebSocket protocol. Players engage in a modified version of the classic "Twenty Questions" parlor game with live updates.
+						</p>
+						<div class="project-tags">
+							<span class="tag">WebSocket</span>
+							<span class="tag">Real-time</span>
+							<span class="tag">Full Stack</span>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer-content">
+				<p class="footer-text">Built with HTML, CSS, and JavaScript</p>
+				<p class="footer-text">© 2025 Arthur Nguyen</p>
+			</div>
+		</footer>
+	</main>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="script.js" type="module"></script>
+	<script src="script.js"></script>
 </body>
 </html>
